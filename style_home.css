@@ -1,0 +1,288 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #000;
+}
+.svg-menu {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 9999;
+}
+.svg-menu img {
+  width: 60px;
+  cursor: pointer;
+}
+.content-container {
+  /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/310106/salemtint.jpg"); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.content-container h1{
+  color: #fff;
+
+}
+.content-container .primary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 16pt;
+  font-family: sans-serif;
+  font-weight: 100;
+  height: 100%;
+}
+.content-container .primary-content img {
+  max-height: 90%;
+  max-width: 90%;
+}
+.menu-reveal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+}
+#reveal1 {
+  -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+}
+#reveal1.anim {
+  -webkit-clip-path: polygon(75% 100%, 0 25%, 0 100%);
+}
+#reveal2.anim {
+  -webkit-clip-path: polygon(100% 75%, 25% 0, 100% 0);
+}
+#reveal3.anim {
+  -webkit-clip-path: polygon(100% 74%, 100% 100%, 74% 100%, 0 26%, 0 0, 26% 0);
+}
+#menu-content {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("v5.png");
+  background-size: cover;
+  background-position: top right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu-content.anim {
+  animation-name: fade;
+  animation-duration: 0.1s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.info-block {
+  background-color: #000;
+  color: red;
+  padding: 50px;
+  font-size: 20px;
+  max-width: 70%;
+  height: 200px;
+  width: 500px;
+  display: flex; /* Active Flexbox */
+  flex-direction: column; /* Arrange les éléments verticalement */
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+  text-align: center; /* Centre le texte */
+}
+.content-container.anim {
+  transform: scale(0.85, 0.85);
+}
+@-moz-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* Section portfolio */
+.portfolio-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #d3d3d3;
+  font-weight: bold;
+}
+
+/* Projet individuel */
+.portfolio-item {
+  display: flex;
+  flex-wrap: wrap; /* Permet d'adapter la disposition sur petits écrans */
+  background: white;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du projet */
+.portfolio-item img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover; /* Coupe l'image si nécessaire */
+}
+
+/* Contenu du projet */
+.portfolio-content {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.portfolio-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.portfolio-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Bouton "Voir le projet" */
+.btn-view-project {
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Aligne le bouton à gauche */
+}
+
+.btn-view-project:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive : Petits écrans */
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex-direction: column; /* Les projets s'empilent verticalement */
+  }
+
+  .portfolio-item img {
+    max-width: 100%; /* L'image prend toute la largeur */
+  }
+
+  .portfolio-content {
+    text-align: center; /* Centre le texte sur mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Conteneur pour aligner les boutons */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centre les boutons horizontalement */
+  gap: 15px; /* Ajoute de l'espace entre les boutons */
+  margin-top: 20px; /* Espacement entre le texte et les boutons */
+}
+
+/* Style des boutons */
+.styled-button {
+  padding: 30px 40px; /* Taille des boutons */
+  font-size: 1rem; /* Taille du texte */
+  font-family: 'Montserrat', sans-serif; /* Police élégante */
+  font-weight: 600; /* Texte en semi-gras */
+  color: #fff; /* Texte blanc */
+  background: linear-gradient(45deg, #007bff, #00d4ff); /* Dégradé bleu */
+  border: none; /* Pas de bordure */
+  border-radius: 25px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de clic */
+  transition: all 0.3s ease; /* Animation fluide */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/* Effet au survol */
+.styled-button:hover {
+  background: linear-gradient(45deg, #0056b3, #007bff); /* Changement de dégradé */
+  transform: translateY(-2px); /* Légère levée */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Accentue l'ombre */
+}
+
+/* Réactif pour petits écrans */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column; /* Les boutons s'empilent verticalement */
+    align-items: center;
+  }
+
+  .styled-button {
+    width: 80%; /* Les boutons prennent presque toute la largeur */
+    text-align: center;
+  }
+}

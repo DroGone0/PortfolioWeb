@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #131217;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-content: center;
+  font-family: Montserrat;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+#pattern {
+  position: absolute;
+  top: -44px;
+  left: -50px;
+  right: 0;
+  bottom: 0;
+}
+
+#gradient {
+  background: radial-gradient(#ff8811, transparent 50%);
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  transform: translate(200px, 200px);
+}
+
+/* -- youtube link styling -- */
+
+.links {
+  border-top: 1px solid #ffffff50;
+  border-right: 1px solid #ffffff50;
+  border-top-right-radius: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+
+    & > svg {
+      margin-left: 0.5rem;
+      flex-shrink: 0;
+    }
+    &:nth-child(1) > svg {
+      stroke: #dd2d4a;
+    }
+    &:nth-child(2) > svg {
+      stroke: #2b59c3;
+    }
+  }
+}
+
+
+
+/* AJOUT */
+
+
+
+#center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+}
+
+#portfolio-btn {
+  background-color: #ff8811;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+#portfolio-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 136, 17, 0.8);
+}
+
+#ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 136, 17, 0.5), transparent);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.ripple-active {
+  animation: ripple-effect 1.5s ease-out forwards;
+}
+
+@keyframes ripple-effect {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.8;
+  }
+  100% {
+    width: 800px;
+    height: 800px;
+    opacity: 0;
+  }
+}
+
+/* Conteneur pour le texte et le bouton */
+#introduction,
+#center-button {
+  position: relative;
+  z-index: 3; /* Au-dessus du quadrillage */
+  text-align: center;
+}
+
+/* Styles pour le texte */
+#introduction {
+  margin-bottom: 20px; /* Espace entre le texte et le bouton */
+}
+
+#intro-name {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #ff8811;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ff8811; /* Simule un curseur clignotant */
+}
+
+#intro-description {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  opacity: 0;
+  animation: fade-in 2s ease-out forwards;
+  animation-delay: 3.5s; /* Affiche le texte après l'effet d'écriture */
+}
+
+/* Styles pour le bouton */
+#center-button {
+  margin-top: 20px; /* Espace entre le texte et le bouton */
+}
+
+/* Quadrillage d'hexagones */
+#pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Place le quadrillage en arrière-plan */
+}
+
+
+
+/* Effet d'écriture */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #ff8811;
+  }
+}
+
+/* Effet d'apparition progressive */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* TRANSITION 1 */
+
+

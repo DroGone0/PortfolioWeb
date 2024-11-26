@@ -11,6 +11,7 @@ body {
   left: 50px;
   z-index: 9999;
 }
+
 .svg-menu img {
   width: 60px;
   cursor: pointer;
@@ -74,7 +75,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("v5.png");
+  background: url("V2.png");
   background-size: cover;
   background-position: top right;
   display: flex;
@@ -90,12 +91,13 @@ body {
 }
 .info-block {
   background-color: #000;
-  color: red;
+  color: aliceblue;
   padding: 50px;
   font-size: 20px;
   max-width: 70%;
   height: 200px;
   width: 500px;
+  border-radius: 1%;
   display: flex; /* Active Flexbox */
   flex-direction: column; /* Arrange les éléments verticalement */
   justify-content: center; /* Centre verticalement */
@@ -156,70 +158,67 @@ body {
   color: #d3d3d3;
   font-weight: bold;
 }
-
-/* Projet individuel */
-.portfolio-item {
-  display: flex;
-  flex-wrap: wrap; /* Permet d'adapter la disposition sur petits écrans */
-  background: white;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Image du projet */
-.portfolio-item img {
-  width: 100%;
-  max-width: 400px;
-  object-fit: cover; /* Coupe l'image si nécessaire */
-}
-
-/* Contenu du projet */
-.portfolio-content {
-  flex: 1;
-  padding: 1.5rem;
+/* Styles communs pour toutes les boîtes */
+.portfolio-item,
+.portfolio-content2 {
+  width: calc(100% - 2rem); /* Prend toute la largeur avec une petite marge */
+  margin: 1rem auto; /* Espace entre les boîtes et centre horizontalement */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85); /* Fond blanc avec transparence */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  border-radius: 10px; /* Coins arrondis */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Bordure fine */
+  backdrop-filter: blur(10px); /* Ajoute un effet de flou */
+  overflow: hidden; /* Évite les débordements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
 }
 
-.portfolio-content h3 {
+.portfolio-item:hover,
+.portfolio-content2:hover {
+  transform: translateY(-10px); /* Élève légèrement la boîte au survol */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Ombre renforcée */
+  background: rgba(255, 255, 255, 0.95); /* Fond légèrement plus opaque */
+}
+
+.portfolio-item h3,
+.portfolio-content2 h3 {
   font-size: 1.8rem;
+  color: #333; /* Texte sombre pour un contraste optimal */
   margin-bottom: 1rem;
-  color: #444;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-.portfolio-content p {
+.portfolio-item p,
+.portfolio-content2 p {
   font-size: 1rem;
-  color: #666;
+  color: #555; /* Gris pour un design propre */
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-/* Bouton "Voir le projet" */
 .btn-view-project {
   font-size: 1rem;
-  color: white;
-  background-color: #007bff;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #007bff, #00d4ff); /* Dégradé bleu vif */
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  align-self: flex-start; /* Aligne le bouton à gauche */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
 .btn-view-project:hover {
-  background-color: #0056b3;
+  background: linear-gradient(45deg, #0056b3, #007bff); /* Variation au survol */
+  transform: scale(1.1); /* Zoom léger */
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.5);
 }
-
 /* Responsive : Petits écrans */
 @media (max-width: 768px) {
   .portfolio-item {
@@ -286,3 +285,131 @@ body {
     text-align: center;
   }
 }
+
+
+
+.portfolio-content2 {
+  width: calc(100% - 2rem); /* Prend toute la largeur, moins une marge intérieure */
+  margin: 1rem auto; /* Centre la boîte verticalement et laisse un espace autour */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9); /* Fond blanc transparent */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  border-radius: 10px; /* Coins arrondis */
+  display: flex; /* Disposition flexible */
+  flex-direction: column; /* Contenu aligné verticalement */
+  justify-content: center; /* Centre le contenu verticalement */
+  align-items: flex-start; /* Aligne à gauche le contenu interne */
+  text-align: left; /* Texte aligné à gauche */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Bordure fine */
+  backdrop-filter: blur(10px); /* Ajoute un effet de flou */
+  overflow: hidden; /* Évite les débordements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+.portfolio-content2:hover {
+  transform: translateY(-10px); /* Légère élévation au survol */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Accentue l'ombre */
+  background: rgba(255, 255, 255, 1); /* Rend le fond légèrement moins transparent */
+}
+
+.portfolio-content2 h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.portfolio-content2 p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-content2 .btn-view-project {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #007bff, #00d4ff); /* Dégradé bleu vif */
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.portfolio-content2 .btn-view-project:hover {
+  background: linear-gradient(45deg, #0056b3, #007bff);
+  transform: scale(1.1); /* Légère agrandissement au survol */
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Supprime les marges et colle la boîte au bord gauche */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Supprime les barres de défilement horizontales */
+}
+
+.portfolio-section {
+  padding: 0; /* Supprime le padding global de la section */
+}
+
+@media (max-width: 768px) {
+  .portfolio-content2 {
+    padding: 1.5rem;
+    border-radius: 5px; /* Coins plus petits sur mobile */
+  }
+
+  .portfolio-content2 h3 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-content2 p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* NEW DIV  */
+
+.full-width-div {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+  padding: 20px;
+  box-shadow: 0px 4px 17px rgba(150, 150, 150, 1); /* Ombre subtile */
+  text-align: center;
+  box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+
+
+
+
+
+
+.menu-button {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/310106/hamburger.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu-button:focus {
+  outline: none; /* Supprime le focus par défaut */
+}
+
+
+
+
+
+
+
+
+

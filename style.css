@@ -233,3 +233,34 @@ h1 {
 /* TRANSITION 1 */
 
 
+/* Style de base pour le titre */
+#hero-heading {
+  font-size: 3.5rem;
+  color: #fff;
+  text-align: center;
+  overflow: hidden; /* Nécessaire pour l'effet */
+  white-space: nowrap; /* Évite que le texte se casse en plusieurs lignes */
+  border-right: 4px solid #f7d354; /* Curseur type machine à écrire */
+  width: 0; /* Initialement masqué */
+  animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+}
+
+/* Animation de l'écriture */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%; /* Texte complètement visible */
+  }
+}
+
+/* Animation du clignotement du curseur */
+@keyframes blink {
+  from {
+      border-color: transparent;
+  }
+  to {
+      border-color: #f7d354;
+  }
+}

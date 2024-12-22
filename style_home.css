@@ -567,7 +567,8 @@ h2::after {
 .modal-content {
   position: relative;
   background: #fff;
-  padding: 20px;
+  padding: 20px; /* Espace global */
+  padding-top: 60px; /* Espace pour la croix */
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
@@ -575,29 +576,33 @@ h2::after {
   text-align: center;
 }
 
+.modal-content h3 {
+  margin-top: 0; /* Ajustement de la marge pour le titre */
+}
+
+
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 2rem;
+  top: 10px; /* Ajusté pour ne pas chevaucher */
+  right: 10px; /* Ajusté pour rester au bord */
+  font-size: 1.8rem; /* Taille réduite légèrement */
   color: #ff8811;
   cursor: pointer;
-  padding: 5px 10px; /* Ajout de padding pour un meilleur rendu */
-  border: 2px solid #ff8811; /* Bordure orange */
-  border-radius: 8px; /* Angles arrondis */
+  padding: 5px;
+  border: none; /* Suppression de la bordure */
   background-color: transparent; /* Fond transparent */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-  background-color: #ff8811; /* Fond orange au survol */
-  color: #fff; /* Couleur blanche pour le texte au survol */
+  color: #e56f00; /* Couleur plus foncée au survol */
 }
+
 
 
 
 .modal-image {
-  width: 150px; /* Taille de l'image */
+  width: 450px; /* Taille de l'image */
   height: auto;
   margin: 10px 0; /* Espacement autour de l'image */
   border-radius: 10px; /* Angles arrondis */

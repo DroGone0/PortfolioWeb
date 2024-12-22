@@ -125,19 +125,24 @@ function updateLanguage() {
 
 const cardData = [
   {
-      title: "Titre du Sujet 1",
-      detail: "Détail complet sur le sujet 1. Vous pouvez ajouter une description plus approfondie ici avec des informations pertinentes.",
-      image: "image1.jpg"
+      title: "Mise en Place d'un site web dynamique en lien avec une API",
+      detail: "Il s'agit d'un projet réalisé en groupe de trois personnes, visant à la création d'un site web dynamique en HTML/CSS/JavaScript/PHP. L'objectif était de développer un module pour un ERP existant en utilisant son API, tout en proposant de nouvelles fonctionnalités de gestion : gestion des employés, des stocks et de la comptabilité.",
+      image: "dolibi.png"
   },
   {
-      title: "Titre du Sujet 2",
-      detail: "Détail complet sur le sujet 2. Expliquez les points importants ou incluez des informations supplémentaires.",
-      image: "image2.jpg"
+      title: "Creation d'une application en JavaFX",
+      detail: "Ce projet, réalisé en groupe (à trois), avait pour objectif de concevoir une application en Java/JavaFX dotée d'une interface respectant les critères d'ergonomie de Scapin. L'application permettait le suivi des notes d'un étudiant et offrait la possibilité de transférer les bulletins des étudiants en réseau entre deux machines",
+      image: "javafx.png"
   },
   {
-      title: "Titre du Sujet 3",
-      detail: "Détail complet sur le sujet 3. Ajoutez des anecdotes ou des détails qui captiveront l'utilisateur.",
-      image: "image3.jpg"
+      title: "Mise en place d'une IA en python pour jeu de puissance4",
+      detail: "Il s'agit d'un projet de groupe réalisé à trois, dans lequel nous avons développé un jeu de Puissance 4 en Python. Les coups de l'adversaire ont été programmés à l'aide d'un algorithme capable d'évaluer les meilleures positions sur plusieurs tours à l'avance.",
+      image: "p4.png"
+  },
+  {
+    title: "Certification d'un cable réseau",
+    detail: "En groupe de 2 nous avons utiliser des outils professionnels afin de verifier la conformité d'un cable aux normes CAT6 permanent Link",
+    image: "certif.png"
   }
 ];
 
